@@ -24,6 +24,25 @@ npx prisma migrate dev --name init1
 # VER BASES DE DATOS
 npx prisma studio
 
+# GIT
+# create a new repository on the command line
+echo "# next-mongo-crud-antodb" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/albertCalifornia/mui-datatable-sqlite-db
+git push -u origin main
+
+
+# …or push an existing repository from the command line
+git init
+git add .
+git commit -m "Modificacion Ayuda.md"
+git branch -M main
+git push -u origin main
+
+
 # Rutas con id.(params)
 export const GET = async (req, {params}) => {
   return NextResponse.json("Obteniendo tarea " + params.id)
