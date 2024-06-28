@@ -9,7 +9,7 @@ export const DbAxios = () => {
   const [products, setProducts] = useState([]);
 
   //2 - funcion para mostrar los datos con axios
-  const endpoint = "http://localhost:3001/api/tarea/";
+  const endpoint = "http://localhost:3000/api/tarea/";
  
   const getData = async () => {
     await axios.get(endpoint).then((response) => {

@@ -12,6 +12,7 @@ const Navbar = () => {
             <Link href="/dbaxio">Axios-DB</Link>
             <Link href="/tableaxio">Axios-Api</Link>
             <Link href="/tabledummy">Fetch-Dummy</Link>
+            <Link href="/tableprod">F-Products</Link>
             <Link href="/about">About...</Link>
         </div>
     </nav>

@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 import MUIDataTable from "mui-datatables";
 import Link from "next/link";
 
-export const TableDummy = () => {
+export const TableProd = () => {
   //1 - configuramos Los hooks
-  const [users, setUsers] = useState([]);
+  const [products, setProducts] = useState([]);
 
   //2 - funcion para mostrar los datos con fetch
   useEffect(() => {
-    fetch("https://dummyjson.com/users")
+    fetch("http://dummyjson.com/products")
       .then((res) => res.json())
       .then((data) => {
-        setUsers(data?.users);
+        setProducts(data?.products);
         console.log(data)
       });
   }, []);
@@ -25,35 +25,37 @@ export const TableDummy = () => {
     },
 
     {
-      name: "image",
-      label: "PROFILE",
+      name: "images",
+      label: "IMAGEN",
       options: {
         customBodyRender: (value) => (
           <img
             src={value}
             alt="pic"
-            className=" w-10 h-10 rounded-full p-1 bg-slate-400"
+            className=" w-20 h-20 rounded-full p-1 bg-slate-200"
           />
         ),
         filter: false,
       },
     },
+
+    
     {
-      name: "firstName",
+      name: "title",
       label: "NOMBRE",
     },
     {
-      name: "lastName",
-      label: "APELLIDO",
+      name: "description",
+      label: "DESCRIPCION",
     },
     {
-      name: "gender",
-      label: "GENERO",
+      name: "category",
+      label: "CATEGORIA",
       options: {
         customBodyRender: (value) => (
           <p
             className={` capitalize  px-2 py-1 inline-block rounded-full ${
-              value === "male" ? " bg-blue-300" : " bg-pink-300"
+              value === "beauty" ? " bg-blue-300" : " bg-pink-300"
             }`}
           >
             {value}
@@ -71,8 +73,8 @@ export const TableDummy = () => {
     <div className="py-10 min-h-screen grid place-items-center">
       <div className=" w-10/12 max-w-4xl">
         <MUIDataTable
-          title={"Muestra Api Dummy with Fetch"}
-          data={users}
+          title={"Api Products with Fetch"}
+          data={products}
           columns={columns}
           options={optionx}
         />

@@ -1,3 +1,6 @@
+# Tutorial Muy Bueno
+https://www.youtube.com/watch?v=_SPoSMmN3ZU&t=11631s
+
 # INSTALAR NEXT JS
 npx create-next-app@latest
 
@@ -38,7 +41,7 @@ git push -u origin main
 # …or push an existing repository from the command line
 git init
 git add .
-git commit -m "Modificacion Ayuda.md"
+git commit -m "Nuevo component TableProd.jxs"
 git branch -M main
 git push -u origin main
 

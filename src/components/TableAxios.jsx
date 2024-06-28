@@ -12,7 +12,8 @@ export const TableAxios = () => {
   const endpoint = "https://fakestoreapi.com/products";
 
   const getData = async () => {
-    await axios.get(endpoint).then((response) => {
+    await axios.get(endpoint)
+    .then((response) => {
       const data = response.data;
       console.log(data);
       setProducts(data);
@@ -48,7 +49,9 @@ export const TableAxios = () => {
           columns={columns}
         />
       </div>
-      <Link href="/" className=" bg-blue-500 p-2 rounded-full">Volver</Link>
+      <Link href="/" className=" bg-blue-500 p-2 rounded-full">
+        Volver
+      </Link>
     </div>
   );
 };
